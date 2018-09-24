@@ -55,7 +55,7 @@ public class Livro {
 
     }
 
-    p
+    
 
     
 
@@ -80,7 +80,7 @@ public class Livro {
         if (porcetagem > 0.3){
             return false;
         }else if(!this.impresso && porcetagem > 0.15){
-            return false
+            return false;
         }
         this.valor -= this.valor * porcetagem;
         return true;
