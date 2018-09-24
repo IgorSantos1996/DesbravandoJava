@@ -1,22 +1,19 @@
 public class Livro {
-    private String nome;
+    public String nome;
     private String descricao;
     private double valor;
     private String isbn;
     private Autor autor;
     private boolean impresso;
- 
-    
-    public Livro (){}
+
+    public Livro() {
+    }
 
     public Livro(Autor autor) {
         this.autor = autor;
         this.isbn = "000-00-00000-00-0";
         this.impresso = true;
     }
-
-
-    
 
     public double getValor() {
         return valor;
@@ -55,10 +52,6 @@ public class Livro {
 
     }
 
-    
-
-    
-
     void showDetails01() {
         String mensagem = "Mostrando detalhes do livro";
         System.out.println(mensagem);
@@ -77,13 +70,17 @@ public class Livro {
     }
 
     public boolean aplicaDesconto(double porcetagem) {
-        if (porcetagem > 0.3){
+        if (porcetagem > 0.16) {
+            System.out.println("Aplicando desconto no Livro");
             return false;
-        }else if(!this.impresso && porcetagem > 0.15){
+
+        } else if (!this.impresso && porcetagem > 0.15) {
             return false;
         }
         this.valor -= this.valor * porcetagem;
+        System.out.println("Aplicando desconto no Livro");
         return true;
+
     }
 
     void adicionaValor(double valor) {

@@ -13,5 +13,10 @@ public class RegrasDesconto {
         }
         Ebook ebook = new Ebook(autor);
         ebook.setValor(29.90);
+
+        if(!ebook.aplicaDesconto(0.2)){
+            System.out.println();
+        }
+
     }
 }
