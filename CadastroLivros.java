@@ -6,7 +6,7 @@ public class CadastroLivros {
         autor.setEmail ("igsantos1996@gmail.com");
         autor.setCpf  ("123.122.121.32");
 
-        Livro l = new Livro(autor);
+        Livro l = new LivroFisico(autor);
         l.setNome ("Java  prático");
         l.setDescricao ("Novos recursos da liguagem");
         l.setValor (59.90);

@@ -2,7 +2,7 @@ public class RegrasDesconto {
     public static void main(String[] args) {
         Autor autor  = new Autor();
         autor.setNome("Igor");
-        Livro l = new Livro(autor);
+        Livro l = new MiniLivro(autor);
         l.setValor(89.99);
         System.out.println("Valor atual: " + l.getValor());
 

@@ -1,4 +1,4 @@
-public class Livro {
+public abstract class Livro {
     public String nome;
     private String descricao;
     private double valor;
@@ -70,7 +70,7 @@ public class Livro {
     }
 
     public boolean aplicaDesconto(double porcetagem) {
-        if (porcetagem > 0.16) {
+        /* if (porcetagem > 0.30) {
             System.out.println("Aplicando desconto no Livro");
             return false;
 
@@ -79,7 +79,8 @@ public class Livro {
         }
         this.valor -= this.valor * porcetagem;
         System.out.println("Aplicando desconto no Livro");
-        return true;
+        return true; */
+        return false;
 
     }
 
