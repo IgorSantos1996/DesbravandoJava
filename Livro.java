@@ -1,4 +1,4 @@
-public abstract class Livro {
+public abstract class Livro implements Produto {
     public String nome;
     private String descricao;
     private double valor;
