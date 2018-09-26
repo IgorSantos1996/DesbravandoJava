@@ -38,6 +38,10 @@ public class Ebook extends Livro implements Promocional {
         return true;
         // return super.aplicaDescontoDe(porcentagem);
     }
+    @Override
+    public String toString(){
+        return "Eu sou um Ebook";
+    }
 
     /*
      * public void setDescricao(String descricao) { this.descricao = descricao; }

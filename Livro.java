@@ -10,6 +10,9 @@ public abstract class Livro implements Produto {
     }
 
     public Livro(Autor autor) {
+        if (autor == null) {
+            throw new AutorNuloException("O autor do livro não pode ser nulo");
+        }
         this.autor = autor;
         this.isbn = "000-00-00000-00-0";
         this.impresso = true;
@@ -70,19 +73,15 @@ public abstract class Livro implements Produto {
     }
 
     public abstract boolean aplicaDesconto(double porcetagem);
-        /* if (porcetagem > 0.30) {
-            System.out.println("Aplicando desconto no Livro");
-            return false;
-
-        } else if (!this.impresso && porcetagem > 0.15) {
-            return false;
-        }
-        this.valor -= this.valor * porcetagem;
-        System.out.println("Aplicando desconto no Livro");
-        return true; */
-        //return false;
-
-    
+    /*
+     * if (porcetagem > 0.30) { System.out.println("Aplicando desconto no Livro");
+     * return false;
+     * 
+     * } else if (!this.impresso && porcetagem > 0.15) { return false; } this.valor
+     * -= this.valor * porcetagem;
+     * System.out.println("Aplicando desconto no Livro"); return true;
+     */
+    // return false;
 
     void adicionaValor(double valor) {
         this.valor = valor;
@@ -95,6 +94,17 @@ public abstract class Livro implements Produto {
     public boolean temAutor() {
         boolean naoEhNull = this.autor != null;
         return naoEhNull;
+    }
+    @Override
+    public void toString(){
+        System.out.println("Nome: " + nome);
+        System.out.println("Descrição: " + descricao);
+        System.out.println("Valor: " + valor);
+        System.out.println("ISBN: " + isbn);
+        if(this.temAutor()){
+            autor.toString();
+        }
+        System.out.println("---");
     }
 
 }
